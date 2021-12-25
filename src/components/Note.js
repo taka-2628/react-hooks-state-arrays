@@ -10,7 +10,8 @@ function SpicyFoodList() {
     const newFoodArr = [...foods, newFood];
     setFoods(newFoodArr)
   }
-
+  
+  // When clicked remove the <li> (spicy food), food's heat level is incremented by 1
   function handleLiClick(id){
     const newFoodArr = foods.map((food) => {
       if (food.id === id){
@@ -24,7 +25,7 @@ function SpicyFoodList() {
     })
     setFoods(newFoodArr)
   }
-  /* version 1 click on li element to remove from DOM
+  /* // When clicked remove the <li> (spicy food) from DOM
   function handleLiClick(id){
     const newFoodArray = foods.filter((food) => food.id !== id);
     setFoods(newFoodArray);
